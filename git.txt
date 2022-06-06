@@ -1,0 +1,137 @@
+Git configuration levels
+
+System => All users on pc + All their repos
+
+Global => All repos on computer for current user.
+
+Local => Only current repo
+
+
+
+Git repo is .git file inside project which contains multiple configuartion files and current project history
+
+
+
+git command to tell git who you are
+
+   
+git config --global user.name "Muhammad Arsala"
+
+git config --global user.email "muhammad.arsalan3697@gmail.com"
+
+
+to check value for specific config property
+
+git config user.name
+git config user.email
+git config --list
+
+
+to change default editor 
+
+git config --global core.editor "editor .exe file location" 
+
+
+
+
+Creating git repo locally
+
+git init //to create new local repo
+
+git add eg.txt eg2.txt  //to add particular tracked files
+
+git status  //to check status of staged files
+
+git add *.js // it will add all javascript files to commit
+
+git rm --cached <file name> //to remove file from tracking. cached removes file from comitting not form file
+
+touch <filename> //to create file
+
+nano <filename> // to edit file in console
+
+git log //commit history
+
+git log -2 //will get recent 2 commits history
+
+git log --pretty=oneline // to get history in one line 
+
+git commit --amend //to edit commit message to already present commit
+
+git commit --amend --no-edit // to add file to already present commit
+
+git restore --satged <filename> //to unstage file
+
+git restore <filename> //to discard changes in files
+
+git remote -v //to check origin of remote repository
+
+git remote add origin <url> //to add remote repository
+
+git push origin -u master //it will synchronize local repo with remote repo with master branch
+
+git clone //to clone existing repo
+
+SSH => Secure Socket Shell
+
+git remote set-url origin //to change remote origin
+
+git branch <branchname> //to create new branch
+
+git branch //to list all local branches
+
+git branch -d <branchname> // to delete branch which is pushed and merged
+
+git branch -D <branchname> //deletes branch which is not even pushed or merged
+
+git branch -r //to delete all local branches
+
+git branch -a //to list all local and remote branches
+
+git checkout -b <branchname> //create and switch to new branch simultaneously
+
+git log <branchname> //to get commit history of single branch
+
+git push origin --delete <branchname> //to remove remote branch
+
+git switch master //to switch to master
+
+git switch -c <branchname> // create and switch to new branch
+
+git switch - //switch to previous branch
+
+git fetch //to fetch changes from remote repo
+
+git merge --abort //to abort merge
+
+git rebase --abort //to abort merge
+
+//fast-forward means when source branch is ahead of target branch
+
+//git pull is combination of meger and fetch
+
+//Merge through rebase
+
+git pull --rebase origin master //git fetch and git rebase from remote repo
+
+git git rebase --continue
+
+git push -f //forced update
+
+git push --force-with-lease //it only override if you have more commits on remote branch than all other team members
+
+git rebase -i HEAD~3 // will take you to last three commits
+
+//to squash use interactive rebase in editor
+ 
+
+
+ 
+
+
+
+
+
+
+
+
